@@ -20,12 +20,13 @@ from games.gta import GTA5
 from games.rocketleague import RocketLeague
 from games.rdr2 import RDR2
 from games.seaofthieves import SeaOfThieves
+from games.valorant import Valorant
 
 
 _all_games = [
 	Battlerite(), LeagueOfLegends(), HuntShowdown(), PathOfExile(), Warframe(), PUBG(), Fortnite(),
 	Hearthstone(), CSGO(), Overwatch(), DOTA2(), Diablo3(), DBD(), Runescape(), RainbowSix(), WorldOfTanks(),
-	HOTS(), WorldOfWarcraft(), GTA5(), RocketLeague(), RDR2(), SeaOfThieves()
+	HOTS(), WorldOfWarcraft(), GTA5(), RocketLeague(), RDR2(), SeaOfThieves(), Valorant()
 ]
 
 
