@@ -14,11 +14,18 @@ class CSGO(Game):
 			link = elem.find('a')
 			_url = link["href"]
 			_title = link.text
-			_desc = elem.find('p', attrs={'class': None}).text
+			_desc = self.get_whole_desc(elem)
 			yield Update(game=self, update_name=_title, post_url=_url, desc=_desc, color="#2f2217")
 
+
+	def get_whole_desc(self, elem):
+		_desc = ""
+		for p in elem.find_all('p', attrs={'class': None}):
+			_desc = _desc + p.text + "\n\n"
+		return _desc
 
 if __name__ == "__main__":
 	lol = CSGO()
 	for u in lol.scan():
 		print(u)
+
