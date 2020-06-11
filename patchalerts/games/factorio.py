@@ -38,11 +38,18 @@ class Factorio(Game):
             if item.name is None:
                 continue
 
+<<<<<<< HEAD
             if item.name == "strong": 
                 _desc = _desc + "__**" + item.text + "**__\n"
             elif item.text == "\n":
                 _desc = _desc + item.text
             else:
                 _desc = _desc + item.text.replace("\n", "\n- ") + "\n"
+=======
+            if item.name is "strong": 
+                _desc = _desc + "**" + item.text + "** \n"
+            else:
+                _desc = _desc + item.text + "\n"
+>>>>>>> upstream/master
             
         return _desc
